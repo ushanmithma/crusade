@@ -63,8 +63,8 @@ let browserSyncReload = (cb) => {
 
 // Watch task
 let watchTask = () => {
-	watch('./pages/*.html', browserSyncReload)
-	watch([files.scssPath, files.jsPath, files.tsPath], parallel(sassTask, jsTask, browserSyncReload))
+	watch('./*.html', browserSyncReload)
+	watch([files.scssPath, files.jsPath], parallel(sassTask, jsTask, browserSyncReload))
 }
 
 exports.build = series(sassTask, jsTask)

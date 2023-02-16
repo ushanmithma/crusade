@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+@mixin mq($size) {
+	$breakpoint: map.get($breakpoints, $size);
+
+	@media only screen and (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin truncate($line-clamp) {
+	text-overflow: -o-ellipsis-lastline;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -moz-box;
+	display: -webkit-box;
+	-webkit-line-clamp: $line-clamp;
+	-moz-box-orient: vertical;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+}
