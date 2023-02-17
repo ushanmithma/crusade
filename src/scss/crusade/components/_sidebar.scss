@@ -42,16 +42,29 @@
 	.brand-logo > img {
 		width: 100%;
 		height: 100%;
+		padding: 0;
+		transition: all $sidebar-animation-duration $sidebar-animation-timing-curve;
 	}
 
-	.logo-title,
-	.user-name {
-		display: none;
+	.top-sidebar-content {
+		padding-top: 0.15rem;
+		text-align: center;
+		transform: scale(0);
+		transform-origin: top left;
+		width: 0px;
+		height: 0px;
+		transition: transform $sidebar-animation-duration $sidebar-animation-timing-curve, width $sidebar-animation-duration $sidebar-animation-timing-curve,
+			height $sidebar-animation-duration $sidebar-animation-timing-curve;
+
+		.logo-title,
+		.user-name {
+			opacity: 0;
+			transition: opacity $sidebar-animation-duration $sidebar-animation-timing-curve;
+		}
 	}
 
 	.logo-title {
 		font-weight: 500;
-		padding-top: 0.15rem;
 	}
 
 	.user-name {
@@ -95,9 +108,10 @@
 	justify-content: center;
 	align-items: center;
 	color: var(--bs-gray-500);
-	padding: 0.75rem 0;
+	padding: 0.75rem 0.5rem;
 	position: relative;
 	text-decoration: none;
+	gap: 0;
 	transition: all $sidebar-animation-duration $sidebar-animation-timing-curve;
 
 	&::before {
@@ -129,11 +143,15 @@
 	flex-shrink: 0;
 	font-size: 1.75rem;
 	color: currentColor;
+	padding-left: 0;
 	transition: all $sidebar-animation-duration $sidebar-animation-timing-curve;
 }
 
 .sidebar-link-text {
-	display: none;
+	transform: scale(0);
+	transform-origin: top left;
+	width: 0px;
+	transition: transform $sidebar-animation-duration $sidebar-animation-timing-curve, width $sidebar-animation-duration $sidebar-animation-timing-curve;
 }
 
 .sidebar-link-text span {
@@ -156,9 +174,15 @@
 		}
 	}
 
-	.user-name,
-	.logo-title {
-		display: initial;
+	.top-sidebar-content {
+		transform: scale(1);
+		width: 100%;
+		height: auto;
+
+		.logo-title,
+		.user-name {
+			opacity: 1;
+		}
 	}
 
 	.sidebar-list.sidebar-sub-list .sidebar-link {
@@ -180,7 +204,8 @@
 	}
 
 	.sidebar-link-text {
-		display: block;
+		transform: scale(1);
+		width: 100%;
 	}
 
 	.sidebar-link-text span {
