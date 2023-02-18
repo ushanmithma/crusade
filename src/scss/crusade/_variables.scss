@@ -1616,8 +1616,9 @@ $pre-color: null !default;
 $header-height: 64px;
 $sidebar-mobile-width: 70px;
 $sidebar-desktop-width: 255px;
-$sidebar-animation-duration: 200ms;
+$sidebar-animation-duration: 300ms;
 $sidebar-animation-timing-curve: ease-in-out;
+$main-container-min-width: 411px;
 
 // Breakpoints
 $breakpoints: (

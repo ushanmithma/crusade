@@ -4,7 +4,9 @@
 }
 
 .content {
-	margin: 1.5rem;
+	min-width: calc($main-container-min-width - calc($sidebar-mobile-width + 1.5rem));
+	padding-right: 1.5rem;
+	margin: 1.5rem 0 1.5rem 0;
 	margin-left: calc($sidebar-mobile-width + 1.5rem);
 	transition: margin-left $sidebar-animation-duration $sidebar-animation-timing-curve;
 }
@@ -154,6 +156,13 @@
 	transition: transform $sidebar-animation-duration $sidebar-animation-timing-curve, width $sidebar-animation-duration $sidebar-animation-timing-curve;
 }
 
+.link-arrow {
+	display: none;
+	font-size: 1.3rem;
+	flex-shrink: 0;
+	color: currentColor;
+}
+
 .sidebar-link-text span {
 	color: currentColor;
 	opacity: 0;
@@ -210,6 +219,10 @@
 
 	.sidebar-link-text span {
 		opacity: 1;
+	}
+
+	.link-arrow {
+		display: initial;
 	}
 }
 

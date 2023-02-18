@@ -17,6 +17,7 @@
 
 // Custom utilities
 @import './crusade/utilities';
+@import './crusade/animations';
 
 // Layout & components
 @import '../../node_modules/bootstrap/scss/root';
@@ -58,5 +59,6 @@
 @import '../../node_modules/bootstrap/scss/utilities/api';
 
 // Components
+@import './crusade/components/dropdown';
 @import './crusade/components/header';
 @import './crusade/components/sidebar';

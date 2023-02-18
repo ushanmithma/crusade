@@ -1,10 +1,11 @@
 .header {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	position: sticky;
 	top: 0;
 	background-color: white;
-	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+	border-bottom: 1px solid var(--bs-gray-200);
 	padding: 0 0.75rem;
 	height: $header-height;
 	z-index: 1;
@@ -30,4 +31,28 @@
 		font-size: 1.75rem;
 		color: var(--bs-gray-600);
 	}
+}
+
+.user-info .dropdown-toggle::after {
+	display: none;
+}
+
+.user-link {
+	text-decoration: none;
+}
+
+.user-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+}
+
+.user-avatar {
+	width: 40px;
+	height: 40px;
+}
+
+.user-text {
+	color: var(--bs-gray-600);
 }
