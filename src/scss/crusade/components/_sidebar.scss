@@ -5,6 +5,7 @@
 
 .content {
 	min-width: calc($main-container-min-width - calc($sidebar-mobile-width + 1.5rem));
+	width: 100%;
 	padding-right: 1.5rem;
 	margin: 1.5rem 0 1.5rem 0;
 	margin-left: calc($sidebar-mobile-width + 1.5rem);

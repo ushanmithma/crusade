@@ -179,7 +179,100 @@
 					</ul>
 				</div>
 			</aside>
-			<main class="content"></main>
+			<main class="content">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+						<li class="breadcrumb-item"><a href="#">Student Management</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Student Registration</li>
+					</ol>
+				</nav>
+				<div class="border-bottom"></div>
+				<div class="row py-3">
+					<div class="col-12 col-md-6">
+						<h3>Student Registration</h3>
+					</div>
+					<div class="col-12 col-md-6">
+						<div class="text-md-end">
+							<button type="button" class="btn btn-primary">All Students</button>
+						</div>
+					</div>
+				</div>
+				<form class="form-border rounded p-xl-4">
+					<div class="pb-3">
+						<h5>Add Student Details</h5>
+					</div>
+					<div class="row">
+						<div class="col-12 col-xxl-6">
+							<div class="mb-3 row">
+								<label for="reg-no" class="col-sm-3 col-form-label">Reg No</label>
+								<div class="col-sm-9">
+									<input id="reg-no" type="text" class="form-control" value="SN0001" />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="full-name" class="col-sm-3 col-form-label">Full Name</label>
+								<div class="col-sm-9">
+									<input id="full-name" type="text" class="form-control is-invalid" placeholder="Enter Your Name" /> <!-- add `is-invalid` class to input element when error occurred -->
+									<div class="invalid-feedback">Error message goes here</div>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="calling-name" class="col-sm-3 col-form-label">Calling Name</label>
+								<div class="col-sm-9">
+									<input id="calling-name" type="text" class="form-control" placeholder="Enter Your Calling Name" />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="school-name" class="col-sm-3 col-form-label">School Name</label>
+								<div class="col-sm-9">
+									<input id="school-name" type="text" class="form-control" placeholder="Enter Your School Name" />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="health-conditions" class="col-sm-3 col-form-label">Health Conditions (Optional)</label>
+								<div class="col-sm-9">
+									<textarea id="health-conditions" class="form-control" placeholder="Enter Your Health Conditions" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-6">
+							<div class="mb-3 row">
+								<label for="dob" class="col-sm-3 col-form-label">Date of Birth</label>
+								<div class="col-sm-9">
+									<input id="dob" type="date" class="form-control" />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="gender" class="col-sm-3 col-form-label">Gender</label>
+								<div class="col-sm-9">
+									<select id="gender" class="form-control">
+										<option value="M">Male</option>
+										<option value="F">Female</option>
+										<option value="O">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="whatsapp-no" class="col-sm-3 col-form-label">WhatsApp No</label>
+								<div class="col-sm-9">
+									<input id="whatsapp-no" type="tel" class="form-control" placeholder="07XXXXXXXX" />
+								</div>
+							</div>
+							<div class="mb-3 row">
+								<label for="address" class="col-sm-3 col-form-label">Address</label>
+								<div class="col-sm-9">
+									<textarea id="address" class="form-control" placeholder="Enter Your Address" rows="4"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="text-end">
+						<button type="button" class="btn btn-light">Cancel</button>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</form>
+			</main>
 		</div>
 		<script src="dist/js/app.js"></script>
 	</body>
