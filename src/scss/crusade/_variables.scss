@@ -37,7 +37,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue: #0d6efd !default;
+$blue: #0d6dfd !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
@@ -50,10 +50,10 @@ $cyan: #0dcaf0 !default;
 // scss-docs-end color-variables
 
 // Crusade color scheme
-$brand: #a52121 !default;
-$accent: #c42727 !default;
-$neutral: #fdde11 !default;
-$base: #f69220 !default;
+$brand: hsl(216, 98%, 52%) !default;
+$accent: hsl(216, 98%, 59%) !default;
+$neutral: hsl(52, 98%, 53%) !default;
+$base: hsl(32, 92%, 55%) !default;
 
 // scss-docs-start colors-map
 $colors: (
